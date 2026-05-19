@@ -73,7 +73,7 @@ function App() {
           onSubmit={handlePredict}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
-          {/* NEW: Model Selection Dropdown */}
+          {/* Model Selection Dropdown */}
           <div className="flex flex-col space-y-2 md:col-span-2 p-4 bg-indigo-950/30 border border-indigo-500/30 rounded-2xl">
             <label className="text-sm text-indigo-300 font-bold tracking-wider uppercase">
               Select AI Model
