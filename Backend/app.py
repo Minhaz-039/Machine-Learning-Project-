@@ -52,6 +52,11 @@ def predict_price():
         # If anything goes wrong, send the error back
         return jsonify({'error': str(e)}), 400
 
+# --- NEW: Health Check Route ---
+@app.route('/', methods=['GET'])
+def home():
+    return "AI Car Price Predictor Backend is Awake and Running Successfully!"
+# -------------------------------
 
 # 4. Run the Server
 if __name__ == '__main__':
