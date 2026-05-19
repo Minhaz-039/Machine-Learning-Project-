@@ -17,6 +17,7 @@ with open('models/car_price_model.pkl', 'rb') as file:
     
 model = model_data['model']
 model_columns = model_data['columns']
+model_stats = model_data['stats']
 print("Model loaded successfully!")
 
 # 3. Create the API Route /predict
@@ -42,7 +43,9 @@ def predict_price():
         
         # F. Send the predicted price back to React as a JSON response
         return jsonify({
-            'predicted_price_tk': round(prediction, 2)
+            'predicted_price_tk': round(prediction, 2) ,
+            'model_statistics': model_stats,         # <--- New!
+            'user_inputs': data                      # <--- Point 5: Returning the user's input summary!
         })
 
     except Exception as e:
