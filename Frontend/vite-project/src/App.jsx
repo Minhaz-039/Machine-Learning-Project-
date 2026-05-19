@@ -34,7 +34,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://machine-learning-project-1-wwky.onrender.com",
+        "https://machine-learning-project-1-wwky.onrender.com/predict",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
